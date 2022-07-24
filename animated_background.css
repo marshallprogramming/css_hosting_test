@@ -1,0 +1,145 @@
+@-webkit-keyframes panImage1 {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  100%{
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes panImage1 {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  100%{
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes panImage2 {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+
+  100%{
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes panImage2 {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+
+  100%{
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes panImage1right {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+
+  100%{
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes panImage1right {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+
+  100%{
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes panImage2right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  100%{
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes panImage2right {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  100%{
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+.animate-image {
+  display: none;
+}
+
+@media only screen and (max-width: 619px) {
+  .sh-pan-mobile .Theme-Item-Picture,
+  .sh-pan-mobile-right .Theme-Item-Picture {
+    display: none;
+  }
+
+  .animate-image {
+    -o-object-fit: contain;
+       object-fit: contain;
+    height: 100vh;
+    width: auto;
+    -webkit-animation-name: panImage;
+            animation-name: panImage;
+    -webkit-animation-duration: 20s;
+            animation-duration: 20s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .animate-image-1 {
+    -webkit-animation-name: panImage1;
+            animation-name: panImage1;
+  }
+  
+  .animate-image-2 {
+    -webkit-animation-name: panImage2;
+            animation-name: panImage2;
+  }
+  
+  .animate-image-1-right {
+    -webkit-animation-name: panImage1right;
+            animation-name: panImage1right;
+  }
+  
+  .animate-image-2-right {
+    -webkit-animation-name: panImage2right;
+            animation-name: panImage2right;
+  }
+}
